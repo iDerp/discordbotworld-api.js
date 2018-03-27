@@ -1,3 +1,3 @@
-var { dbwapimodule } = require('../index');
+var { dbwapimodule } = require('./index');
 
 dbwapimodule.printMsg();
