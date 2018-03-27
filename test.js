@@ -1,3 +1,2 @@
-var { dbwapimodule } = require('./index');
-
-dbwapimodule.printMsg();
+var dbwapi = require('./index');
+const dbw = new dbwapi('DiscordBotWorld Token');
