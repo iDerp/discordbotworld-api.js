@@ -1,0 +1,27 @@
+{
+  "name": "discordbotworld-api",
+  "version": "1.0.0",
+  "description": "Unofficial JS module for interacting with the DiscordBot.World API",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iDerp/discordbotworld-api.git"
+  },
+  "keywords": [
+    "DBW",
+    "DiscordBotWorld",
+    "DiscordBots"
+  ],
+  "author": "iDerp",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/iDerp/discordbotworld-api/issues"
+  },
+  "homepage": "https://github.com/iDerp/discordbotworld-api#readme",
+  "dependencies": {
+    "snekfetch": "^3.6.4"
+  }
+}
