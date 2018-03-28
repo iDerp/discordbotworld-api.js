@@ -20,9 +20,9 @@ class dbwapimodule {
                 } else if (client == null) {
                     console.log('Automated status updating for DBW will not work unless the client is passed.');
                 } else {
-                    client.on('ready', () => { postStats(); })
-                    client.on('guildCreate', () => { postStats(); })
-                    client.on('guildDelete', () => { postStats(); })
+                    this.client.on('ready', () => { postStats(); })
+                    this.client.on('guildCreate', () => { postStats(); })
+                    this.client.on('guildDelete', () => { postStats(); })
                 }
             }
         }
