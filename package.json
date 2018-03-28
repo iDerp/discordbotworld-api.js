@@ -4,8 +4,7 @@
   "description": "Unofficial JS module for interacting with the DiscordBot.World API",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js",
-    "release": "npm-github-release"
+    "test": "node test.js"
   },
   "repository": {
     "type": "git",
@@ -23,7 +22,6 @@
   },
   "homepage": "https://github.com/iDerp/discordbotworld-api.js#readme",
   "dependencies": {
-    "release-it": "^7.2.1",
     "snekfetch": "^3.6.4"
   },
   "devDependencies": {
