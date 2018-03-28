@@ -1,5 +1,9 @@
 # discordbotworld-api
 Unofficial JS module for interacting with the DiscordBot.World API
+***
+[![npm version](https://badge.fury.io/js/discordbotworld-api.js.svg)](https://badge.fury.io/js/discordbotworld-api.js)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/736bf870b9dd4ea4876ecd34c682a287)](https://www.codacy.com/app/iDerp/discordbotworld-api.js?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=iDerp/discordbotworld-api.js&amp;utm_campaign=Badge_Grade)
+***
 
 Fully working with the DiscordBot.World API!
 
