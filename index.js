@@ -31,7 +31,25 @@ class dbwapimodule {
     async getBotStats(botID) {
         return new Promise((resolve, reject) => {
         if (botID == null) {
-            return reject ('You must supply a bot ID to get stats from!');
+            snek.get(`${apiEndpoint}/bot/${this.client.user.id}/stats`).then(r => {
+                if (r.ok) {
+                    let botGuilds = null;
+                    let botShards = null;
+                    let botLikes = null;
+                    if (r.body.guilds != null) {
+                        botGuilds = r.body.guilds;
+                    }
+                    if (r.body.shards != null) {
+                        botShards = r.body.shards;
+                    }
+                    if (r.body.likes != null) {
+                        botLikes = r.body.likes;
+                    }
+                    return resolve({ likes: botLikes, guilds: botGuilds, shards: botShards })
+                } else {
+                    return reject(`No bot was found matching the ID ${this.client.user.id}.`);
+                }
+            }).catch(() => { return reject(`No bot was found matching the ID ${this.client.user.id}.`); })
         } else {
             snek.get(`${apiEndpoint}/bot/${botID}/stats`).then(r => {
                 if (r.ok) {
