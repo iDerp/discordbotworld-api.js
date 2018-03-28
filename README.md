@@ -1,4 +1,7 @@
 # discordbotworld-api
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c79200fb46714c4a8bb3d421b4fa06cf)](https://app.codacy.com/app/iDerp/discordbotworld-api.js?utm_source=github.com&utm_medium=referral&utm_content=iDerp/discordbotworld-api.js&utm_campaign=badger)
+
 Unofficial JS module for interacting with the DiscordBot.World API
 
 Fully working with the DiscordBot.World API!
