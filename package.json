@@ -1,10 +1,11 @@
 {
   "name": "discordbotworld-api.js",
-  "version": "1.0.4",
+  "version": "1.0.0",
   "description": "Unofficial JS module for interacting with the DiscordBot.World API",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+	"release": "npm-github-release"
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,8 @@
   "dependencies": {
     "release-it": "^7.2.1",
     "snekfetch": "^3.6.4"
+  },
+  "devDependencies": {
+    "npm-github-release": "^0.9.0"
   }
 }
