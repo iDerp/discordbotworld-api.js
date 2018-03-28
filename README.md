@@ -12,3 +12,6 @@ var dbwapi = require('discordbotworld-api');
 const dbw = new dbwapi('DiscordBotWorld Token', client);
 ```
 For how to use all the features, or to see more info about setting it up, check out the [wiki](https://github.com/iDerp/discordbotworld-api/wiki)!
+
+
+If you would like more than just Discord.JS, open an issue or try and help out. But for now D.JS is what im making it for.
