@@ -20,9 +20,9 @@ class dbwapimodule {
                 } else if (client == null) {
                     console.log('Automated status updating for DBW will not work unless the client is passed.');
                 } else {
-                    this.client.on('ready', () => { postStats(); })
-                    this.client.on('guildCreate', () => { postStats(); })
-                    this.client.on('guildDelete', () => { postStats(); })
+                    this.client.on('ready', () => { this.postStats(); })
+                    this.client.on('guildCreate', () => { this.postStats(); })
+                    this.client.on('guildDelete', () => { this.postStats(); })
                 }
             }
         }
@@ -31,25 +31,29 @@ class dbwapimodule {
     async getBotStats(botID) {
         return new Promise((resolve, reject) => {
         if (botID == null) {
-            snek.get(`${apiEndpoint}/bot/${this.client.user.id}/stats`).then(r => {
-                if (r.ok) {
-                    let botGuilds = null;
-                    let botShards = null;
-                    let botLikes = null;
-                    if (r.body.guilds != null) {
-                        botGuilds = r.body.guilds;
+            if (this.client != null) {
+                snek.get(`${apiEndpoint}/bot/${this.client.user.id}/stats`).then(r => {
+                    if (r.ok) {
+                        let botGuilds = null;
+                        let botShards = null;
+                        let botLikes = null;
+                        if (r.body.guilds != null) {
+                            botGuilds = r.body.guilds;
+                        }
+                        if (r.body.shards != null) {
+                            botShards = r.body.shards;
+                        }
+                        if (r.body.likes != null) {
+                            botLikes = r.body.likes;
+                        }
+                        return resolve({ likes: botLikes, guilds: botGuilds, shards: botShards })
+                    } else {
+                        return reject(`No bot was found matching the ID ${this.client.user.id}.`);
                     }
-                    if (r.body.shards != null) {
-                        botShards = r.body.shards;
-                    }
-                    if (r.body.likes != null) {
-                        botLikes = r.body.likes;
-                    }
-                    return resolve({ likes: botLikes, guilds: botGuilds, shards: botShards })
-                } else {
-                    return reject(`No bot was found matching the ID ${this.client.user.id}.`);
-                }
-            }).catch(() => { return reject(`No bot was found matching the ID ${this.client.user.id}.`); })
+                }).catch(() => { return reject(`No bot was found matching the ID ${this.client.user.id}.`); })
+            } else {
+                return reject (`The bot ID can't be fetched as the client was not passed.`);
+            }
         } else {
             snek.get(`${apiEndpoint}/bot/${botID}/stats`).then(r => {
                 if (r.ok) {
