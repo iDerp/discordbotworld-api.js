@@ -149,7 +149,7 @@ class dbwapimodule {
             if (botID == null) {
                 return reject('You must supply a bot ID to get info from!');
             } else {
-                snek.get(`${apiEndpoint}/bot/${botID}/info`).then(r => {
+                snek.get(`${apiEndpoint}/bot/${botID}`).then(r => {
                     if (r.ok) {
                         return resolve(r.body)
                     } else {
