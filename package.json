@@ -1,6 +1,6 @@
 {
   "name": "discordbotworld-api.js",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Unofficial JS module for interacting with the DiscordBot.World API",
   "main": "index.js",
   "scripts": {
