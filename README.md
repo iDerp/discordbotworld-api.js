@@ -1,4 +1,5 @@
-# discordbotworld-api
+# discordbotworld-api [DEPRECIATED]
+### This module will no longer be updated.
 Unofficial JS module for interacting with the DiscordBot.World API
 ***
 [![npm Version](https://img.shields.io/npm/v/discordbotworld-api.js.svg)](https://www.npmjs.com/package/discordbotworld-api.js)
